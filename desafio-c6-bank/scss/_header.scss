@@ -1,0 +1,58 @@
+header {
+  background-color: transparent;
+  height: 7.2rem;
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  nav {
+    ul {
+      display: flex;
+      li {
+        &:not(:last-child) {
+          margin-right: 4.6rem;
+        }
+        a {
+          font-weight: 500;
+          font-size: 1.6rem;
+          line-height: 19px;
+          color: rgba(255, 255, 255, 0.5);
+          &:after {
+            content: url(../img/icon-arrow-down.svg);
+            height: 6px;
+            width: 7.5px;
+            margin-left: 1.2rem;
+          }
+        }
+      }
+    }
+  }
+
+  @include responsive(768px) {
+    nav {
+      display: none;
+    }
+  }
+  @include responsive(480px) {
+    .btn-primary {
+      padding-right: 1.6rem;
+      padding-left: 1.6rem;
+    }
+  }
+  @include responsive(375px) {
+    .logo {
+      max-width: 100px;
+    }
+    .btn-primary {
+      font-size: 1.4rem;
+      padding-left: 1.4rem;
+      padding-right: 1.4rem;
+    }
+  }
+}
