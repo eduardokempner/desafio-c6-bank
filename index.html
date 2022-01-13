@@ -17,42 +17,44 @@
   <body>
     <header>
       <div class="container">
-        <div class="logo">
+        <div class="header__logo">
           <img src="/img/logo-c6-white.svg" alt="Logo C6 Bank" />
         </div>
-        <nav>
-          <ul>
-            <li><a href="">Para você</a></li>
-            <li><a href="">Para seu negócio</a></li>
+        <nav class="header__nav">
+          <ul class="header__list">
+            <li class="header__item"><a href="">Para você</a></li>
+            <li class="header__item"><a href="">Para seu negócio</a></li>
           </ul>
         </nav>
-        <button class="btn-primary">Abra sua conta</button>
+        <button class="btn btn--primary">Abra sua conta</button>
       </div>
     </header>
 
-    <section class="s-hero">
+    <section class="hero">
       <div class="container">
-        <div class="left">
-          <div class="programa-pontos">
+        <div class="hero__content">
+          <div class="hero__points">
             <span>Novo</span>
             <p>Conheça nosso Programa de Pontos Átomos</p>
           </div>
-          <h1>Um banco transparente, completo e com a sua cara</h1>
-          <p>
+          <h1 class="hero__title">
+            Um banco transparente, completo e com a sua cara
+          </h1>
+          <p class="hero__text">
             Conta digital e cartão de crédito gratuitos. Saques e transferências
             sem tarifa.
           </p>
-          <button class="btn-secondary">Nossos produtos</button>
+          <button class="btn btn--secondary">Nossos produtos</button>
         </div>
       </div>
     </section>
 
-    <section class="s-sem-tarifas">
+    <section class="tarifas">
       <div class="container">
-        <div class="left">
-          <h2>Sem tarifas:</h2>
-          <h3>economize seu dinheiro</h3>
-          <div class="beneficios">
+        <div class="tarifas__content">
+          <h2 class="tarifas__title">Sem tarifas:</h2>
+          <h3 class="tarifas__subtitle">economize seu dinheiro</h3>
+          <div class="tarifas__benefits">
             <div class="row">
               <div class="item">
                 <span
@@ -107,26 +109,26 @@
             </div>
           </div>
         </div>
-        <div class="image">
+        <div class="tarifas__image">
           <img src="/img/cartoes.png" alt="Cartoes C6 coloridos" />
         </div>
       </div>
     </section>
 
-    <section class="s-banco-completo">
+    <section class="banco-completo">
       <div class="container">
-        <div class="top">
-          <div class="top-content">
+        <div class="banco-completo__top">
+          <div class="top__content">
             <h2>Um banco completo</h2>
             <h3>com produtos exclusivos</h3>
           </div>
-          <div class="top-tabs">
-            <div class="tab active">Para você</div>
+          <div class="top__tabs">
+            <div class="tab tab--active">Para você</div>
             <div class="tab">Para sua empresa</div>
           </div>
         </div>
-        <div class="tabs-content active">
-          <div class="left">
+        <div class="banco-completo__card banco-completo__card--active">
+          <div class="card__content">
             <h3>Conta com cartão C6 Business</h3>
             <p>
               A conta MEI é completa e não tem tarifa de manutenção. Além disso,
@@ -140,8 +142,8 @@
               <span>Aproxime e pague</span>
             </div>
           </div>
-          <div class="right">
-            <div class="area-image">
+          <div class="card__image">
+            <div class="image__area">
               <img
                 class="cartao-frente"
                 src="/img/cartao-business.png"
@@ -154,7 +156,7 @@
               />
             </div>
             <img
-              class="logo-business"
+              class="image__logo"
               src="/img/logo-c6-business.svg"
               alt="Logo c6 business"
             />

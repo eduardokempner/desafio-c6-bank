@@ -1,10 +1,10 @@
-.s-hero {
+.hero {
   background: url("../img/hero-banner.jpg") no-repeat center right;
   height: 70rem;
   width: 100%;
-  .left {
+  .hero__content {
     padding-top: 18.9rem;
-    .programa-pontos {
+    .hero__points {
       display: flex;
       align-items: center;
       margin-bottom: 3.3rem;
@@ -26,19 +26,21 @@
         color: rgba(255, 255, 255, 0.5);
       }
     }
-    h1 {
+    .hero__title {
       max-width: 74rem;
       margin-bottom: 2.4rem;
     }
-    p {
+    .hero__text {
       max-width: 36.5rem;
       font-weight: 500;
       font-size: 1.8rem;
       line-height: 150%;
       color: rgba(255, 255, 255, 0.7);
     }
-    .btn-secondary {
-      margin-top: 4rem;
+    .btn {
+      &--secondary {
+        margin-top: 4rem;
+      }
     }
   }
 
@@ -47,9 +49,9 @@
   }
   @include responsive(768px) {
     height: 66.7rem;
-    .left {
+    .hero__content {
       padding-top: 16rem;
-      h1 {
+      .hero__title {
         max-width: 55rem;
         font-size: 4rem;
         letter-spacing: -0.03em;
@@ -57,19 +59,19 @@
     }
   }
   @include responsive(600px) {
-    .left {
+    .hero__content {
       @include flex(column, center, center);
-      h1 {
+      .hero__title {
         text-align: center;
       }
-      p {
+      .hero__text {
         text-align: center;
       }
     }
   }
   @include responsive(480px) {
-    .left {
-      .programa-pontos {
+    .hero__content {
+      .hero__points {
         span {
           display: none;
         }
@@ -78,25 +80,25 @@
   }
   @include responsive(375px) {
     height: 63rem;
-    .left {
+    .hero__content {
       padding-top: 11rem;
-      h1 {
+      .hero__title {
         font-size: 3.4rem;
       }
     }
   }
 }
 
-.s-sem-tarifas {
+.tarifas {
   padding-top: 9.6rem;
   padding-bottom: 17.3rem;
   .container {
     @include flex(row, flex-start, space-between);
   }
-  .left {
+  .tarifas__content {
     max-width: 625px;
     width: 100%;
-    .beneficios {
+    .tarifas__benefits {
       padding-top: 10rem;
       .row {
         width: 100%;
@@ -134,7 +136,7 @@
       }
     }
   }
-  .image {
+  .tarifas__image {
     position: relative;
     max-width: 466px;
     width: 100%;
@@ -145,36 +147,36 @@
   }
 
   @include responsive(1200px) {
-    .left {
+    .tarifas__content {
       max-width: 57rem;
     }
-    .image {
+    .tarifas__image {
       max-width: 42rem;
     }
   }
   @include responsive(991px) {
     padding-bottom: 9.6rem;
-    .left {
+    .tarifas__content {
       max-width: 65rem;
     }
-    .image {
+    .tarifas__image {
       display: none;
     }
   }
   @include responsive(600px) {
     padding-top: 8rem;
     padding-bottom: 8rem;
-    .left {
+    .tarifas__content {
       display: flex;
       flex-direction: column;
       align-items: center;
-      h2 {
+      .tarifas__title {
         text-align: center;
       }
-      h3 {
+      .tarifas__subtitle {
         text-align: center;
       }
-      .beneficios {
+      .tarifas__benefits {
         padding-top: 6.4rem;
         .row {
           @include flex(column, center, center);
@@ -200,28 +202,28 @@
     }
   }
   @include responsive(480px) {
-    .left {
-      h2 {
+    .tarifas__content {
+      .tarifas__title {
         font-size: 3.2rem;
       }
-      h3 {
+      .tarifas__subtitle {
         font-size: 2.4rem;
       }
     }
   }
 }
 
-.s-banco-completo {
+.banco-completo {
   background: #fafafa;
   padding-top: 10.9rem;
   padding-bottom: 13.4rem;
 
-  .top {
+  .banco-completo__top {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-bottom: 8.7rem;
-    .top-content {
+    .top__content {
       h2 {
         margin-bottom: 0.8rem;
       }
@@ -229,7 +231,7 @@
         font-size: 2.8rem;
       }
     }
-    .top-tabs {
+    .top__tabs {
       max-width: 57.6rem;
       width: 100%;
       padding: 0.8rem 1.1rem;
@@ -254,14 +256,14 @@
         align-items: center;
         justify-content: center;
         cursor: pointer;
-        &.active {
+        &--active {
           color: $white;
           background-color: $black-brand;
         }
       }
     }
   }
-  .tabs-content {
+  .banco-completo__card {
     height: 42.4rem;
     background: linear-gradient(98.6deg, #020302 7.61%, #242424 96.26%);
     border-radius: 12px;
@@ -269,7 +271,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    .left {
+    .card__content {
       h3 {
         max-width: 24rem;
         color: $white;
@@ -298,9 +300,9 @@
         }
       }
     }
-    .right {
+    .card__image {
       position: relative;
-      .area-image {
+      .image__area {
         max-width: 50.4rem;
         height: 42.4rem;
         width: 100%;
@@ -312,7 +314,7 @@
           left: 0;
         }
       }
-      .logo-business {
+      .image__logo {
         position: absolute;
         right: 7.2rem;
         bottom: 5.3rem;
@@ -321,21 +323,21 @@
   }
 
   @include responsive(1100px) {
-    .top {
-      .top-tabs {
+    .banco-completo__top {
+      .top__tabs {
         max-width: 49.6rem;
         .tab {
           width: 22.9rem;
         }
       }
     }
-    .tabs-content {
+    .banco-completo__card {
       padding-left: 5.3rem;
-      .right {
-        .area-image {
+      .card__image {
+        .image__area {
           margin-right: 4.7rem;
         }
-        .logo-business {
+        .image__logo {
           right: 3.2rem;
           bottom: 3.2rem;
         }
@@ -343,10 +345,10 @@
     }
   }
   @include responsive(991px) {
-    .top {
+    .banco-completo__top {
       flex-direction: column;
       justify-content: center;
-      .top-content {
+      .top__content {
         margin-bottom: 4rem;
         h2 {
           text-align: center;
@@ -356,12 +358,12 @@
         }
       }
     }
-    .tabs-content {
+    .banco-completo__card {
       flex-direction: column;
       height: 73rem;
       padding-left: 0;
       padding-top: 6rem;
-      .left {
+      .card__content {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -372,23 +374,23 @@
           text-align: center;
         }
       }
-      .right {
-        .area-image {
+      .card__image {
+        .image__area {
           max-width: 45.5rem;
           height: 38.3rem;
           margin-right: 0;
         }
-        .logo-business {
+        .image__logo {
           display: none;
         }
       }
     }
   }
   @include responsive(600px) {
-    .tabs-content {
+    .banco-completo__card {
       height: 65rem;
-      .right {
-        .area-image {
+      .card__image {
+        .image__area {
           max-width: 37.4rem;
           height: 31.4rem;
           .cartao-frente {
@@ -401,9 +403,9 @@
   @include responsive(480px) {
     padding-top: 8rem;
     padding-bottom: 8rem;
-    .top {
+    .banco-completo__top {
       margin-bottom: 4.8rem;
-      .top-content {
+      .top__content {
         h2 {
           font-size: 3.2rem;
         }
@@ -411,7 +413,7 @@
           font-size: 2.4rem;
         }
       }
-      .top-tabs {
+      .top__tabs {
         padding-left: 0.8rem;
         padding-right: 0.8rem;
         .tab {
@@ -421,18 +423,18 @@
         }
       }
     }
-    .tabs-content {
+    .banco-completo__card {
       height: 60rem;
       padding-left: 1.8rem;
       padding-right: 1.8rem;
-      .left {
+      .card__content {
         h3 {
           font-size: 2.2rem;
           max-width: 22rem;
         }
       }
-      .right {
-        .area-image {
+      .card__image {
+        .image__area {
           max-width: 30rem;
           height: 25.2rem;
           .cartao-frente {
@@ -443,10 +445,10 @@
     }
   }
   @include responsive(375px) {
-    .tabs-content {
+    .banco-completo__card {
       height: 58rem;
-      .right {
-        .area-image {
+      .card__image {
+        .image__area {
           max-width: 25rem;
           height: 21rem;
         }

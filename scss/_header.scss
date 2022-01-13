@@ -11,10 +11,10 @@ header {
     align-items: center;
     justify-content: space-between;
   }
-  nav {
-    ul {
+  .header__nav {
+    .header__list {
       display: flex;
-      li {
+      .header__item {
         &:not(:last-child) {
           margin-right: 4.6rem;
         }
@@ -35,7 +35,7 @@ header {
   }
 
   @include responsive(768px) {
-    nav {
+    .header__nav {
       display: none;
     }
   }
@@ -46,7 +46,7 @@ header {
     }
   }
   @include responsive(375px) {
-    .logo {
+    .header__logo {
       max-width: 100px;
     }
     .btn-primary {
