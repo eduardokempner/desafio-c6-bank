@@ -61,6 +61,11 @@
   @include responsive(600px) {
     .hero__content {
       @include flex(column, center, center);
+      .hero__points {
+        p {
+          text-align: center;
+        }
+      }
       .hero__title {
         text-align: center;
       }

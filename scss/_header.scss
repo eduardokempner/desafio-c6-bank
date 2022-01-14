@@ -1,15 +1,26 @@
 header {
+  position: fixed;
+  z-index: 1000;
   background-color: transparent;
   height: 7.2rem;
   display: flex;
-  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
+  transition: all 0.3s;
   .container {
     display: flex;
     align-items: center;
     justify-content: space-between;
+  }
+
+  .header__logo {
+    display: inline-block;
+    background: url("../img/logo-c6-white.svg") no-repeat center center;
+    width: 12rem;
+    height: 2.4rem;
+    background-size: 100%;
+    transition: background-image 0.3s;
   }
   .header__nav {
     .header__list {
@@ -23,13 +34,44 @@ header {
           font-size: 1.6rem;
           line-height: 19px;
           color: rgba(255, 255, 255, 0.5);
+          transition: color 0.3s;
           &:after {
             content: url(../img/icon-arrow-down.svg);
             height: 6px;
             width: 7.5px;
             margin-left: 1.2rem;
           }
+          &:hover {
+            color: #c8c8c8;
+          }
         }
+      }
+    }
+  }
+
+  &.fixed-menu {
+    background-color: $white;
+    box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.07);
+    .header__logo {
+      background: url(/img/logo-c6.svg);
+    }
+    .header__nav {
+      .header__list {
+        .header__item {
+          a {
+            color: rgba(97, 97, 97, 0.7);
+            &:hover {
+              color: $gray-brand;
+            }
+          }
+        }
+      }
+    }
+    @include responsive(375px) {
+      .header__logo {
+        width: 10rem;
+        height: 2rem;
+        background-size: 100%;
       }
     }
   }
@@ -40,19 +82,23 @@ header {
     }
   }
   @include responsive(480px) {
-    .btn-primary {
-      padding-right: 1.6rem;
-      padding-left: 1.6rem;
+    .btn {
+      &--primary {
+        padding-right: 1.6rem;
+        padding-left: 1.6rem;
+      }
     }
   }
   @include responsive(375px) {
     .header__logo {
       max-width: 100px;
     }
-    .btn-primary {
-      font-size: 1.4rem;
-      padding-left: 1.4rem;
-      padding-right: 1.4rem;
+    .btn {
+      &--primary {
+        font-size: 1.4rem;
+        padding-left: 1.4rem;
+        padding-right: 1.4rem;
+      }
     }
   }
 }
