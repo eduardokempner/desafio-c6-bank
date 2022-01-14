@@ -22,7 +22,74 @@ header {
     background-size: 100%;
     transition: background-image 0.3s;
   }
+
   .header__nav {
+    position: relative;
+
+    .header__dropdown {
+      position: absolute;
+      top: 35px;
+      left: -152px;
+      background-color: $white;
+      box-shadow: 0 0 30px 0 hsla(0, 0%, 0%, 0.1);
+      border-radius: 8px;
+      width: 40.8rem;
+      opacity: 0;
+      pointer-events: none;
+      transform: translateY(20px);
+      transition: all 0.3s;
+      &.active {
+        opacity: 1;
+        pointer-events: all;
+        transform: translateY(0);
+      }
+
+      &:before {
+        content: "";
+        display: block;
+        height: 1.6rem;
+      }
+      &:after {
+        content: "";
+        display: block;
+        height: 1.6rem;
+      }
+      .dropdown__item {
+        display: block;
+        padding: 0.8rem 2.4rem;
+        transition: all 0.2s;
+        &:not(:last-child) {
+          margin-bottom: 1.6rem;
+        }
+        &:hover {
+          background-color: #f1f0f5;
+          & > strong {
+            color: #bd6d0f;
+          }
+          & > p {
+            color: $gray-brand;
+          }
+        }
+
+        strong {
+          display: block;
+          font-weight: 500;
+          font-size: 1.6rem;
+          line-height: 1.9rem;
+          text-transform: uppercase;
+          color: $gray-brand;
+          margin-bottom: 1.2rem;
+          transition: color 0.2s;
+        }
+        p {
+          font-weight: 500;
+          font-size: 1.6rem;
+          line-height: 1.9rem;
+          color: rgba(97, 97, 97, 0.7);
+        }
+      }
+    }
+
     .header__list {
       display: flex;
       .header__item {
