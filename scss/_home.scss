@@ -260,10 +260,17 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        transition: background-color 0.3s;
         cursor: pointer;
+        &:hover {
+          background-color: #e9eaed;
+        }
         &--active {
           color: $white;
           background-color: $black-brand;
+          &:hover {
+            background-color: $black-brand;
+          }
         }
       }
     }
@@ -273,9 +280,12 @@
     background: linear-gradient(98.6deg, #020302 7.61%, #242424 96.26%);
     border-radius: 12px;
     padding-left: 10.3rem;
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: space-between;
+    &--active {
+      display: flex;
+    }
     .card__content {
       h3 {
         max-width: 24rem;
@@ -324,6 +334,34 @@
         position: absolute;
         right: 7.2rem;
         bottom: 5.3rem;
+      }
+    }
+    &.azul {
+      background: linear-gradient(178.64deg, #1c3468 61.47%, #162d5f 144.87%);
+
+      .card__content {
+        p {
+          margin-bottom: 2rem;
+        }
+        a {
+          font-family: "Montserrat", sans-serif;
+          font-size: 1.4rem;
+          line-height: 1.7rem;
+          letter-spacing: 0.02em;
+          text-transform: uppercase;
+          color: $yellow-brand;
+        }
+      }
+
+      .card__image {
+        .image__area {
+          max-width: 35.2rem;
+          height: 42.4rem;
+          .cartao-azul {
+            margin-top: -30px;
+            animation: float 5s infinite;
+          }
+        }
       }
     }
   }
@@ -404,6 +442,15 @@
           }
         }
       }
+
+      &.azul {
+        height: 73rem;
+        .card__image {
+          .image__area {
+            max-width: 25.2rem;
+          }
+        }
+      }
     }
   }
   @include responsive(480px) {
@@ -448,6 +495,15 @@
           }
         }
       }
+
+      &.azul {
+        height: 72rem;
+        .card__image {
+          .image__area {
+            max-width: 23rem;
+          }
+        }
+      }
     }
   }
   @include responsive(375px) {
@@ -457,6 +513,15 @@
         .image__area {
           max-width: 25rem;
           height: 21rem;
+        }
+      }
+
+      &.azul {
+        height: 67rem;
+        .card__image {
+          .image__area {
+            height: 35rem;
+          }
         }
       }
     }
